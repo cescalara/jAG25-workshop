@@ -11,10 +11,10 @@ RUN apt-get update -y && apt-get install -y build-essential
 USER ${NB_UID}
 
 # Setup environment
-RUN pip install cmdstanpy==1.2.5 arviz==0.21.0
+RUN pip install cmdstanpy arviz
 
 # Install cmdstan
-RUN python -m cmdstanpy.install_cmdstan
+RUN install_cmdstan
 
 # Clear entrypoint
 ENTRYPOINT []
